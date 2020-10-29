@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Something went wrong</h1>
+            <p>
+                Server couldn't process the request. Checkout for any URL
+                misspelling or <a href="{{ path('homepage') }}">return to the homepage</a>.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

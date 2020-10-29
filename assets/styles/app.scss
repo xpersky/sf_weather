@@ -1,0 +1,40 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    position: relative;
+    background-color: $base;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+}
+
+table.table {
+    thead {
+        tr th {
+            &.col-lp {
+                width:5%;
+            }
+            &.col-name {
+                width:25%;
+            }
+            &.col-secret {
+                width:60%;
+            }
+            &.col-actions {
+                width:10%;
+            }
+        }
+    }
+}
+
+.x25 {
+    width:25px;
+    height:25px;
+}

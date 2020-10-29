@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Access denied</h1>
+            <p>
+                You have no access to this page. <a href="{{ path('homepage') }}">Return to the homepage</a>.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

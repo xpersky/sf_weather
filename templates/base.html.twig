@@ -4,9 +4,16 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <script src="https://kit.fontawesome.com/48a39b11f1.js" crossorigin="anonymous"></script>
+        {{ encore_entry_link_tags('app') }}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% include 'header.html.twig' %}
+        <div class="my-3">
+            {% block body %}{% endblock %}
+        </div>
+        {% include 'footer.html.twig' %}
+        {{ encore_entry_script_tags('app') }}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

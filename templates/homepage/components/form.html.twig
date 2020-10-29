@@ -1,0 +1,37 @@
+<div class="card">
+    <h5 class="card-header">Request a Temperature</h5>
+    <div class="card-body">
+        {{ form_start(form) }}
+            <div class="form-errors">
+                {{ form_errors(form) }}
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-3">
+                    {{ form_label(form.country) }}
+                </div>
+                <div class="col-9">
+                    {{ form_widget(form.country, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-3">
+                    {{ form_label(form.city) }}
+                </div>
+                <div class="col-9">
+                    {{ form_widget(form.city, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="float-right">
+                        {{ form_widget(form.save, { 'attr': {'class': 'btn btn-primary'} }) }}
+                    </div>
+                </div>
+            </div>
+
+        {{ form_end(form) }}
+    </div>
+</div>

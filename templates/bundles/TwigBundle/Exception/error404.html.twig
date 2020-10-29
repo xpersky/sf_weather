@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            {% if exception.message is not empty %}
+                <h1>{{ exception.message }}</h1>
+                <p>
+                    The requested resource couldn't be located. Checkout for any URL
+                    misspelling or <a href="{{ path('homepage') }}">return to the homepage</a>.
+                </p>
+            {% else %}
+                <h1>Page not found</h1>
+                <p>
+                    The requested page couldn't be located. Checkout for any URL
+                    misspelling or <a href="{{ path('homepage') }}">return to the homepage</a>.
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

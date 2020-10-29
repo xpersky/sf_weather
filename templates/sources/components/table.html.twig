@@ -1,0 +1,24 @@
+<table class="table table-dark table-hover rounded">
+  <thead>
+    <tr>
+      <th scope="col" class="col-lp">#</th>
+      <th scope="col" class="col-name">Name</th>
+      <th scope="col" class="col-secret">Secret</th>
+      <th scope="col" class="col-actions text-right">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for source in sources %}
+    <tr>
+      <th scope="row">{{ source.lp }}</th>
+      <td>{{ source.name }}</td>
+      <td>{{ source.secret }}</td>
+      <td class="text-right">
+        <a href="{{ source.edit }}"><i class="fas fa-edit"></i></a>
+        <a href="{{ source.delete }}"><i class="far fa-trash-alt"></i></a>
+      </td>
+    </tr>
+    {% endfor %}
+   
+  </tbody>
+</table>

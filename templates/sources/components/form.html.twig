@@ -1,0 +1,98 @@
+<div class="card">
+    <h5 class="card-header">Add source</h5>
+    <div class="card-body">
+        {{ form_start(form) }}
+            <div class="form-errors">
+                {{ form_errors(form) }}
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-3">
+                    {{ form_label(form.name) }}
+                </div>
+                <div class="col-9">
+                    {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    
+                </div>
+                <div class="col-3">
+                    {{ form_label(form.url) }}
+                    <button type="button" 
+                    class="btn btn-secondary rounded-circle p-0 x25 float-right" 
+                    data-toggle="tooltip" 
+                    data-html="true"
+                    data-placement="top" 
+                    title="
+                    Remember to specify required options in url:
+                    <b>&#123;country&#125;</b>,<b>&#123;city&#125;</b>,<b>&#123;apikey&#125;</b>
+                    or <b>&#123;latitude&#125;</b> and <b>&#123;longitude&#125;</b>">?</button>
+                </div>
+                <div class="col-9">
+                    {{ form_widget(form.url, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    
+                </div>
+                <div class="col-3">
+                    {{ form_label(form.options) }}
+                    <button type="button" 
+                    class="btn btn-secondary rounded-circle p-0 x25 float-right" 
+                    data-toggle="tooltip" 
+                    data-html="true"
+                    data-placement="top" 
+                    title="Additional API url options not included in base url - provided by key=value 
+                    if two or more provided use &amp; separator">?</button>
+                </div>
+                <div class="col-9">
+                    {{ form_widget(form.options, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-3">
+                    {{ form_label(form.apikey) }}
+                    <button type="button" 
+                    class="btn btn-secondary rounded-circle p-0 x25 float-right" 
+                    data-toggle="tooltip" 
+                    data-html="true"
+                    data-placement="top" 
+                    title="Api key provided">?</button>
+                </div>
+                <div class="col-9">
+                    {{ form_widget(form.apikey, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-3">
+                    {{ form_label(form.field) }}
+                    <button type="button" 
+                    class="btn btn-secondary rounded-circle p-0 x25 float-right" 
+                    data-toggle="tooltip" 
+                    data-html="true"
+                    data-placement="top" 
+                    title="Fetch field name">?</button>
+                </div>
+                <div class="col-9">
+                    {{ form_widget(form.field, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="float-right">
+                        {{ form_widget(form.save, { 'attr': {'class': 'btn btn-primary'} }) }}
+                    </div>
+                </div>
+            </div>
+
+        {{ form_end(form) }}
+    </div>
+</div>

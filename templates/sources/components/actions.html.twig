@@ -1,0 +1,10 @@
+<a href="{{ path('sources_edit',{'id':0}) }}" class="btn btn-primary float-right">Add Source</a>
+<a href="{{ path('sources_editcord') }}" class="btn btn-primary float-right mr-2">Edit Coordinates Source</a>
+<br>
+{% if alert %}
+<div class="container mt-5">
+    <div class="alert alert-danger" role="alert">
+        This app need 2 APIs to work!
+    </div>
+</div>
+{% endif %}
